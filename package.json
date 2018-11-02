@@ -1,0 +1,23 @@
+{
+  "name": "web-serve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "process.js",
+  "bin": {
+    "startServe": "process.js"
+  },
+  "scripts": {
+    "start:dev": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
+}
