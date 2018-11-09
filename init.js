@@ -15,13 +15,15 @@ program.on('--help', function () {
     console.log('')
     })
 program
-    .command('name [name] rename [rename]')
+    .command('run [name]')
+    .option('-r,--rename [rename]')
     .description('移动文件夹到web-serve服务')
-    .action(function(name,rename){  
+    .action(function(name,options){  
         // port_opera.portIsOccupied(7777,()=>{
         //     console.log(1234)
         // })     
         // 删掉dist文件夹
+        let rename = options.rename ? options.rename : name
         console.log(`正在移除${rename}文件夹....`)
         dis_opera.deleteFolder(__dirname+'/dist/'+rename);
         // 重新创建dist,移动目标文件夹
